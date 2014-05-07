@@ -1,0 +1,39 @@
+{
+	"name": "ХРОМ.РФ",
+	"description": "Расширение для читателей сайта ХРОМ.РФ. Уведомление о новостях, быстрый доступ к свежим статьям!",
+	"version": "1.0.8",
+	"manifest_version": 2,
+	"minimum_chrome_version": "24",
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"browser_action": {
+		"default_icon": { 
+			"19": "19.png", 
+			"38": "38.png"
+		},
+		"default_title": "ХРОМ.РФ",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts": [
+			"jquery.js",
+			"lib.js",
+			"bg.js"
+		],
+		"persistent": false
+	},
+	"permissions": [
+		"*://feeds.feedburner.com/my-chrome?format=xml",
+		"*://omahaproxy.appspot.com/*",
+		"alarms",
+		"notifications",
+		"*://*.my-chrome.ru/*",
+		"tabs"
+	],
+	"web_accessible_resources": [
+		"128.png"
+	]
+}
